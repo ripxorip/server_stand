@@ -21,5 +21,20 @@ module half()
     }
 }
 
-half();
-mirror([0,1,0]) half();
+
+translate ([-stand_depth/2,0,0]) union() {
+    half();
+    mirror([0,1,0]) half();
+}
+
+module support() {
+    sup_width = server_thickness*3;
+    difference () {
+        translate([stand_depth/2,-sup_width/2,0]) cube([stand_depth/2, sup_width, floor_height]);
+        translate([stand_depth/2, -sup_width, floor_height*0.75]) rotate([0,45,0]) cube([sup_width,sup_width*2,40]);
+        translate([0, 0, floor_height*0.75+40/2]) cube([sup_width,sup_width*2, 40], center=true);
+    }
+}
+
+support();
+mirror([1,0,0]) support();
