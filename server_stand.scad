@@ -17,7 +17,7 @@ module half()
             cube([stand_depth, server_thickness/2, floor_height]);
             translate([0,server_thickness/2,0]) cube([stand_depth, server_thickness, floor_height+overlap_height]);
         }
-        translate([-stand_depth/2, server_thickness*2, overlap_height]) rotate([45,0 ,0]) cube([stand_depth*2, server_thickness*5, server_thickness*5]);
+        translate([-stand_depth/2, server_thickness*2, floor_height-overlap_height]) rotate([45,0 ,0]) cube([stand_depth*2, server_thickness*5, server_thickness*5]);
     }
 }
 
