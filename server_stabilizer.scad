@@ -6,7 +6,7 @@ tot_width = 120.00;
 server_thickness = 42.00;
 
 overlap_height = 30.00;
-thickness = 5.00;
+thickness = 4.00;
 extra_height = thickness;
 
 rr = 4;
